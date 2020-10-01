@@ -5,7 +5,7 @@ Home: https://github.com/numpy/numpydoc
 
 Package license: BSD 3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Numpy's Sphinx extensions
 
