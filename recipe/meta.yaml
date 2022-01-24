@@ -1,4 +1,4 @@
-{% set version = "1.1.0" %}
+{% set version = "1.2" %}
 
 package:
   name: numpydoc
@@ -7,11 +7,11 @@ package:
 source:
   fn: numpydoc-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/n/numpydoc/numpydoc-{{ version }}.tar.gz
-  sha256: c36fd6cb7ffdc9b4e165a43f67bf6271a7b024d0bb6b00ac468c9e2bfc76448e
+  sha256: 0cec233740c6b125913005d16e8a9996e060528afcb8b7cad3f2706629dfd6f7
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
