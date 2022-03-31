@@ -11,18 +11,19 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python >=3.7
     - setuptools
 
   run:
-    - python >=3.5
-    - sphinx
+    - python >=3.7
+    - sphinx >=1.8
+    - jinja2 >=2.10,<3.1
 
 test:
   imports:
