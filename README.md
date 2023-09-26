@@ -1,11 +1,11 @@
-About numpydoc
-==============
+About numpydoc-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/numpydoc-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/numpy/numpydoc
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/numpydoc-feedstock/blob/main/LICENSE.txt)
 
 Summary: Numpy's Sphinx extensions
 
