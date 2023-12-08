@@ -22,8 +22,9 @@ requirements:
 
   run:
     - python >=3.7
-    - sphinx >=1.8
+    - sphinx >=5
     - jinja2 >=2.10
+    - tabulate >=0.8.10
 
 test:
   requires:
