@@ -1,4 +1,4 @@
-{% set version = "1.6.0" %}
+{% set version = "1.7.0" %}
 
 package:
   name: numpydoc
@@ -7,7 +7,7 @@ package:
 source:
   fn: numpydoc-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/n/numpydoc/numpydoc-{{ version }}.tar.gz
-  sha256: ae7a5380f0a06373c3afe16ccd15bd79bc6b07f2704cbc6f1e7ecc94b4f5fc0d
+  sha256: 866e5ae5b6509dcf873fc6381120f5c31acf13b135636c1a81d68c166a95f921
 
 build:
   noarch: python
