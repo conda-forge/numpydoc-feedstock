@@ -9,6 +9,8 @@ Package license: BSD-3-Clause
 
 Summary: Numpy's Sphinx extensions
 
+Documentation: https://numpydoc.readthedocs.io
+
 Current build status
 ====================
 
@@ -143,6 +145,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@bollwyvl](https://github.com/bollwyvl/)
 * [@jschueller](https://github.com/jschueller/)
 * [@scopatz](https://github.com/scopatz/)
 
