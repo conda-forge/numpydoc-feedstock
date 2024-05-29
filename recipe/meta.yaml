@@ -5,32 +5,32 @@ package:
   version: {{ version }}
 
 source:
-  fn: numpydoc-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/n/numpydoc/numpydoc-{{ version }}.tar.gz
   sha256: 866e5ae5b6509dcf873fc6381120f5c31acf13b135636c1a81d68c166a95f921
 
 build:
   noarch: python
-  number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  number: 1
+  script: {{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation
+  entry_points:
+    - numpydoc = numpydoc.cli:main
 
 requirements:
   host:
     - pip
-    - python >=3.7
-    - setuptools
-
+    - python >=3.8
+    - setuptools >=61.2
   run:
-    - python >=3.7
-    - sphinx >=5
-    - jinja2 >=2.10
+    - python >=3.8
+    - sphinx >=6
     - tabulate >=0.8.10
+    - tomli >=1.1.0
 
 test:
   requires:
     - pip
   commands:
-    - python -m pip check
+    - pip check
   imports:
     - numpydoc
 
@@ -39,8 +39,10 @@ about:
   license: BSD-3-Clause
   license_file: LICENSE.txt
   summary: Numpy's Sphinx extensions
+  doc_url: https://numpydoc.readthedocs.io
 
 extra:
   recipe-maintainers:
     - jschueller
     - scopatz
+    - bollwyvl
