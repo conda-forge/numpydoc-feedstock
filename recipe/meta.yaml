@@ -10,10 +10,10 @@ source:
 
 build:
   noarch: python
-  number: 2
+  number: 3
   script: {{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation
   entry_points:
-    - numpydoc = numpydoc.hooks.validate_docstrings:main
+    - validate-docstrings = numpydoc.hooks.validate_docstrings:main
 
 requirements:
   host:
@@ -29,10 +29,12 @@ requirements:
 test:
   requires:
     - pip
-  commands:
-    - pip check
   imports:
     - numpydoc
+  commands:
+    - pip check
+    - python -m numpydoc --help
+    - validate-docstrings --help
 
 about:
   home: https://github.com/numpy/numpydoc
