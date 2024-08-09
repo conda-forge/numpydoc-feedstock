@@ -1,4 +1,4 @@
-{% set version = "1.7.0" %}
+{% set version = "1.8.0" %}
 
 package:
   name: numpydoc
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/n/numpydoc/numpydoc-{{ version }}.tar.gz
-  sha256: 866e5ae5b6509dcf873fc6381120f5c31acf13b135636c1a81d68c166a95f921
+  sha256: 022390ab7464a44f8737f79f8b31ce1d3cfa4b4af79ccaa1aac5e8368db587fb
 
 build:
   noarch: python
-  number: 3
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation
   entry_points:
     - validate-docstrings = numpydoc.hooks.validate_docstrings:main
