@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
+schema_version: 1
+
+context:
+  version: 1.9.0
+
+package:
+  name: numpydoc
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/n/numpydoc/numpydoc-${{ version }}.tar.gz
+  sha256: 5fec64908fe041acc4b3afc2a32c49aab1540cf581876f5563d68bb129e27c5b
+
+build:
+  number: 1
+  noarch: python
+  script:
+    - ${{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation --disable-pip-version-check
+  python:
+    entry_points:
+      - numpydoc = numpydoc.cli:main
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - setuptools >=61.2
+  run:
+    - python >=${{ python_min }}
+    - sphinx >=6
+    - tomli >=1.1.0
+
+tests:
+  - python:
+      imports: numpydoc
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - 3.13.*
+  - requirements:
+      run:
+        - python ${{ python_min }}.*
+    script:
+      - python -m numpydoc --help
+      - numpydoc --help
+
+about:
+  license: BSD-3-Clause
+  license_file: LICENSE.txt
+  summary: "Numpy's Sphinx extensions"
+  homepage: https://github.com/numpy/numpydoc
+  documentation: https://numpydoc.readthedocs.io
+
+extra:
+  recipe-maintainers:
+    - jschueller
+    - scopatz
+    - bollwyvl
