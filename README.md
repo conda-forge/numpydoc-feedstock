@@ -9,7 +9,7 @@ Package license: BSD-3-Clause
 
 Summary: Numpy's Sphinx extensions
 
-Documentation: https://numpydoc.readthedocs.io
+Documentation: https://numpydoc.readthedocs.io/
 
 Current build status
 ====================
