@@ -44,6 +44,14 @@ tests:
     script:
       - python -m numpydoc --help
       - numpydoc --help
+  - requirements:
+      run:
+        - matplotlib-base
+        - pytest-cov
+        - python ${{ python_min }}.*
+    script:
+      - coverage run --source=numpydoc --branch -m pytest -vv --tb=long --color=yes --pyargs numpydoc -k "not (test_main and test_lint)"
+      - coverage report --show-missing --skip-covered --fail-under=84
 
 about:
   license: BSD-3-Clause
