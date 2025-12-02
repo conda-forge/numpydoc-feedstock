@@ -9,8 +9,10 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/n/numpydoc/numpydoc-${{ version }}.tar.gz
-  sha256: 3f7970f6eee30912260a6b31ac72bba2432830cd6722569ec17ee8d3ef5ffa01
+  #url: https://pypi.org/packages/source/n/numpydoc/numpydoc-${{ version }}.tar.gz
+  #sha256: 3f7970f6eee30912260a6b31ac72bba2432830cd6722569ec17ee8d3ef5ffa01
+  url: https://github.com/numpy/numpydoc/archive/v1.10.0.tar.gz
+  sha256: 7005b3902c764dbb5d5a79889727d7aef39896c48f6b1ec252c2741d83140221
 
 build:
   number: 0
