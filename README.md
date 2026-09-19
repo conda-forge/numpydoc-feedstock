@@ -3,11 +3,13 @@ About numpydoc-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/numpydoc-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/numpy/numpydoc
+Home: https://pypi.org/project/numpydoc
 
 Package license: BSD-3-Clause
 
-Summary: Numpy's Sphinx extensions
+Summary: Sphinx extension to support docstrings in Numpy format
+
+Development: https://github.com/numpy/numpydoc
 
 Documentation: https://numpydoc.readthedocs.io/
 
