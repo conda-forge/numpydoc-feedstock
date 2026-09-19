@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "1.10.0"
+  version: "1.11.0"
 
 package:
   name: numpydoc
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/n/numpydoc/numpydoc-${{ version }}.tar.gz
-  sha256: 3f7970f6eee30912260a6b31ac72bba2432830cd6722569ec17ee8d3ef5ffa01
+  sha256: 26db0adaac8087e98da05c86b11198defd962aef7c21f4dffd2703c8c6eb4187
 
 build:
   number: 0
